@@ -10,7 +10,8 @@ During my exam period i used this tool to crack ms word password.
 # How To Use This Tool
 
 1) Download this tool and save it using git clone.
-2) ./ms-word-file-cracker.sh       
+2)  cd Microsoft-Office-Password-Cracker && chmod +x *
+3) ./ms-word-file-cracker.sh       
 
    a) script will start and will make tryhackme name folder on your desktop. 
    
