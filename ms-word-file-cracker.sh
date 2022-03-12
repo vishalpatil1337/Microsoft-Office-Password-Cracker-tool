@@ -1,24 +1,37 @@
 
 #!/bin/sh
 
+
+RED="31"
+GREEN="32"
+BOLDGREEN="\e[1;${GREEN}m"
+ENDCOLOR="\e[0m"
+
+
+
+
+echo '\n'
 echo ""
-echo "making tryhackme folder in Desktop"
-echo ""
+echo  "${BOLDGREEN}making tryhackme folder in Desktop${ENDCOLOR}"
+echo '\n'
 mkdir ~/Desktop/tryhackme
 path=~/Desktop/tryhackme
 cd $path
 
-echo "downloading office2john.py"
-echo ""
-echo "removing duplicates office2john files ( it happens to use this script multiple times)"
+echo  "${BOLDGREEN}downloading office2john.py                 ${ENDCOLOR}"
+
+echo '\n'
+
+echo  "${BOLDGREEN}removing duplicates office2john files ( it happens to use this script multiple times)                  ${ENDCOLOR}"
+
 rm office2john.py.*
-echo ""
+echo '\n'
 
 sudo wget https://raw.githubusercontent.com/magnumripper/JohnTheRipper/bleeding-jumbo/run/office2john.py
 
-echo ""
+echo '\n'
 echo "__________________________________________________________________________________________"
-echo ""
+echo '\n'
 
 sleep 1
 
@@ -33,16 +46,16 @@ sleep 5
 echo "__________________________________________________________________________________________"
 
 
-echo "+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+
+echo  "${RED} +-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+
 |D|O|C|X| |P|A|S|S|W|O|R|D| |C|R|A|C|K|E|R|
-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+"
++-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+       ${ENDCOLOR}"
 echo "__________________________________________________________________________________________"
-echo ""
+echo '\n'
 
 sleep 2
 
-echo  "enter MS WORD file name with full path. ( error will generate if you not give full path )" 
-echo ""
+echo  "${BOLDGREEN}Enter MS WORD file name with full path. ( must give file's full path otherwise will show error )     ${ENDCOLOR}"
+echo '\n'
 
 read file
 
@@ -51,28 +64,32 @@ read file
 sudo python office2john.py $file  >  $path/hash
 
 
-echo "your Hash file is saved sucessfully inside of '$path' folder"
-echo ""
+echo  "${BOLDGREEN}Your Hash file is saved sucessfully inside of '$path' folder                  ${ENDCOLOR}"
+echo '\n'
 
 sleep 5
 
 
-echo "attack is going to start. Please wait for some time"
-echo ""
+echo  "${BOLDGREEN}Attack is going to start. Please wait for some time                  ${ENDCOLOR}"
+echo '\n'
 sudo john $path/hash --wordlist=$path/second.txt 
 
-echo "attack is sucessful" 
-echo ""
+
+echo  "${BOLDGREEN}Attack is sucessful                 ${ENDCOLOR}"
+echo '\n'
 
 sleep 2
 
-echo "check password"
-echo ""
+echo  "${BOLDGREEN}Check password                 ${ENDCOLOR}"
+echo '\n'
 echo "__________________________________________________________________________________________"
+echo '\n'
+
+
 echo ""
-echo "YOUR PASSWORD IS  :" 
+echo  "${RED}YOUR PASSWORD IS  :       ${ENDCOLOR}"
 sudo john hash --show  | awk -F: '{print $2}'
-echo ""
+echo '\n'
 echo "__________________________________________________________________________________________"
 
 
