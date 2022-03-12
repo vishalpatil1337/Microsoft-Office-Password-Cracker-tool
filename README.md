@@ -5,6 +5,11 @@ Using Microsoft Office Password Cracker tool we can crack any Microsoft Office f
 During my exam period i used this tool to crack ms word password & it worked.
 
 
+# Requirements
+
+1) sudo apt-get install john
+2) sudo apt-get install screenfetch
+
 
 
 # How To Use This Tool
