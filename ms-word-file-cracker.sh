@@ -2,10 +2,14 @@
 #!/bin/sh
 
 
-RED="31"
+RED="\e[31m"
 GREEN="32"
 BOLDGREEN="\e[1;${GREEN}m"
 ENDCOLOR="\e[0m"
+ORANGE="\e[33m"
+BLUE="\e[94m"
+GREEN="\e[92m"
+STOP="\e[0m"
 
 
 
@@ -18,7 +22,8 @@ mkdir ~/Desktop/tryhackme
 path=~/Desktop/tryhackme
 cd $path
 
-echo  "${BOLDGREEN}downloading office2john.py                 ${ENDCOLOR}"
+echo '\n'
+echo "${RED}downloading office2john.py${ENDCOLOR}"
 
 echo '\n'
 
@@ -46,15 +51,24 @@ sleep 5
 echo "__________________________________________________________________________________________"
 
 
-echo  "${RED} +-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+
-|D|O|C|X| |P|A|S|S|W|O|R|D| |C|R|A|C|K|E|R|
-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+       ${ENDCOLOR}"
+screenfetch
+printf "${GREEN}"
+printf "=================================\n"
+printf "${ORANGE}"
+figlet -w 200 -f standard "MS OFFICE"       
+printf "${BLUE}"
+figlet -w 200 -f  small "PASSWORD CRACKER TOOL" 
+printf "${GREEN}"
+printf "=================================\n"
+printf "${STOP}"
+
 echo "__________________________________________________________________________________________"
 echo '\n'
 
 sleep 2
 
 echo  "${BOLDGREEN}Enter MS WORD file name with full path. ( must give file's full path otherwise will show error )     ${ENDCOLOR}"
+echo "example : /home/kali/Desktop/abcd.docx"
 echo '\n'
 
 read file
