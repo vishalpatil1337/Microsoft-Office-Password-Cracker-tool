@@ -59,7 +59,7 @@ sleep 5
 
 echo "attack is going to start. Please wait for some time"
 echo ""
-sudo john $path/hash --wordlist=$path
+sudo john $path/hash --wordlist=$path/second.txt 
 
 echo "attack is sucessful" 
 echo ""
