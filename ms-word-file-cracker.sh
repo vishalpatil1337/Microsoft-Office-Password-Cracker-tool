@@ -27,7 +27,7 @@ echo "${RED}downloading office2john.py${ENDCOLOR}"
 
 echo '\n'
 
-echo  "${BOLDGREEN}removing duplicates office2john files ( it happens to use this script multiple times)                  ${ENDCOLOR}"
+echo  "${BOLDGREEN}removing duplicate office2john files ( it happens to use this script multiple times)                  ${ENDCOLOR}"
 
 rm office2john.py.*
 echo '\n'
@@ -67,7 +67,7 @@ echo '\n'
 
 sleep 2
 
-echo  "${BOLDGREEN}Enter MS WORD file name with full path. ( must give file's full path otherwise will show error )     ${ENDCOLOR}"
+echo  "${BOLDGREEN}Enter MS WORD file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
 echo "example : /home/kali/Desktop/abcd.docx"
 echo '\n'
 
@@ -78,23 +78,23 @@ read file
 sudo python office2john.py $file  >  $path/hash
 
 
-echo  "${BOLDGREEN}Your Hash file is saved sucessfully inside of '$path' folder                  ${ENDCOLOR}"
+echo  "${BOLDGREEN}Your Hash file saved sucessfully inside of '$path' folder                  ${ENDCOLOR}"
 echo '\n'
 
 sleep 5
 
 
-echo  "${BOLDGREEN}Attack is going to start. Please wait for some time                  ${ENDCOLOR}"
+echo  "${BOLDGREEN}Attack is going to start. Please wait for some time.                  ${ENDCOLOR}"
 echo '\n'
 sudo john $path/hash --wordlist=$path/second.txt 
 
 
-echo  "${BOLDGREEN}Attack is sucessful                 ${ENDCOLOR}"
+echo  "${BOLDGREEN}Attack is sucessful.                 ${ENDCOLOR}"
 echo '\n'
 
 sleep 2
 
-echo  "${BOLDGREEN}Check password                 ${ENDCOLOR}"
+echo  "${BOLDGREEN}Check password -->                ${ENDCOLOR}"
 echo '\n'
 echo "__________________________________________________________________________________________"
 echo '\n'
