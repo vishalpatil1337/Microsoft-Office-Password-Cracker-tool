@@ -87,7 +87,10 @@ sleep 5
 echo  "${BOLDGREEN}Attack is going to start. Please wait for some time.                  ${ENDCOLOR}"
 echo '\n'
 sudo john $path/hash --wordlist=$path/second.txt 
+echo '\n'
 
+echo "__________________________________________________________________________________________"
+echo '\n'
 
 echo  "${BOLDGREEN}Attack is sucessful.                 ${ENDCOLOR}"
 echo '\n'
@@ -96,8 +99,7 @@ sleep 2
 
 echo  "${BOLDGREEN}Check password -->                ${ENDCOLOR}"
 echo '\n'
-echo "__________________________________________________________________________________________"
-echo '\n'
+
 
 
 echo ""
