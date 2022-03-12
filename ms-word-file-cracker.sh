@@ -41,7 +41,7 @@ echo ""
 
 sleep 2
 
-echo  "enter MS WORD file name with full path." 
+echo  "enter MS WORD file name with full path. ( error will generate if you not give full path )" 
 echo ""
 
 read file
