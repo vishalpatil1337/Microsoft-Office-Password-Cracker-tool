@@ -40,6 +40,9 @@ During my exam period i used this tool to crack ms word password & it worked.
    g) After some time you will get a password. 
   
   
+  # Blog Tutorial
+  
+  **https://www.techxbyte.in/2022/03/how-i-cracked-question-paper-password-before-time-during-exam.html**
   
   # Video Tutorial
 
