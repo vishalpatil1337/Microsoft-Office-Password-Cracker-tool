@@ -1,8 +1,8 @@
 # Microsoft-Office-Password-Cracker-tool
-Using Microsoft Office Password Cracker tool we can crack any Microsoft Office file's password.This tool is using office2john.py &amp; john tool. wordlist generator is also included in python script.
+Using Microsoft Office Password Cracker tool we can crack any Microsoft Office file's password.This tool uses john the ripper and office2john.py script to crak the password. wordlist generator is also included in python script.
 
 
-During my exam period i used this tool to crack ms word password & it worked.
+During my exam period i made this tool to crack my password protected word document.
 
 
 # Requirements
@@ -12,10 +12,10 @@ During my exam period i used this tool to crack ms word password & it worked.
 
 
 
-# How To Use This Tool
+# Installation & Usage
 
-1) Download this tool and save it using git clone.
-2)  cd Microsoft-Office-Password-Cracker-tool && chmod +x *
+1) git clone https://github.com/vishalpatil1337/Microsoft-Office-Password-Cracker-tool.git
+2) cd Microsoft-Office-Password-Cracker-tool && chmod +x *
 3) ./ms-word-file-cracker.sh       
 
    a) script will start and will make tryhackme name folder on your desktop. 
