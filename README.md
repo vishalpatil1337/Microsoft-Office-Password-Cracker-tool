@@ -32,12 +32,12 @@ cd Microsoft-Office-Password-Cracker-tool && chmod +x *
 
    d) enter subject name : here you need to write any subject name for example ai (artificial intelligence). 
       This custom wordlist builder will make a Wordlist containing   
-   
-      0 - 9999  
-      ai0 - ai9999  
-      AI0 - AI9999  
-      ai@0 - ai@9999  
       
+      •	0 - 9999
+      •	ai0 - ai9999  
+      •	AI0 - AI9999  
+      •	ai@0 - ai@9999
+
       in my case the exam password is probably like subject name and 3 to 6 numbers - example ai123  
                                 
  
