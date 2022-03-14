@@ -2,33 +2,36 @@
 Using Microsoft Office Password Cracker tool we can crack any Microsoft Office file's password.This tool uses john the ripper and office2john.py script to crak the password. wordlist generator is also included in python script.
 
 
-During my exam period i made this tool to crack my password protected word document.
+During my exam period i made this tool to crack my password protected question paper.
 
 
 # Requirements
 
-1) sudo apt-get install john
-2) sudo apt-get install screenfetch
+**John The Ripper
+Screenfetch**
 
+You can install them with the following Command
+
+``` bash
+sudo apt-get install john screenfetch
+```
 
 
 # Installation & Usage
 
 ``` bash
 git clone https://github.com/vishalpatil1337/Microsoft-Office-Password-Cracker-tool.git
+cd Microsoft-Office-Password-Cracker-tool && chmod +x *
+./ms-word-file-cracker.sh       
 ```
-
-2) cd Microsoft-Office-Password-Cracker-tool && chmod +x *
-3) ./ms-word-file-cracker.sh       
-
    a) script will start and will make tryhackme name folder on your desktop. 
    
    b) it will download office2john.py script using curl command
    
-   c) if there is office2john.py alredy exist the second file will be remove using rm command.
+   c) if office2john.py alredy exists the second file will be removed using rm command.
 
 
-   d) enter subject name :     here you need to write any subject name for example ai  (artificial intelligence). 
+   d) enter subject name :      here you need to write any subject name for example ai  (artificial intelligence). \n
                                 it will make Wordlist 0-99999 , ai1-9999, AI0-99999,ai@0-99999 in this format. 
                                 in exam password is probably like subject name then 3 to 6 letters - example ai123  
                                 
@@ -45,7 +48,7 @@ git clone https://github.com/vishalpatil1337/Microsoft-Office-Password-Cracker-t
   
   # Blog Tutorial
   
-  **https://www.techxbyte.in/2022/03/how-i-cracked-question-paper-password-before-time-during-exam.html**
+**https://www.techxbyte.in/2022/03/how-i-cracked-question-paper-password-before-time-during-exam.html**
   
   # Video Tutorial
 
