@@ -70,5 +70,6 @@ $ ./ms-word-file-cracker.sh
 
 Special Thanks to -: 
    •	Omkar Kalantre  :   https://github.com/omkar-ok
+   
    •	Satyam Ray      :   https://github.com/batmans0123456
 
