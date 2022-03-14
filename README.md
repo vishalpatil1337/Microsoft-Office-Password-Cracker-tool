@@ -13,7 +13,8 @@ You can install them with the following Command
 
 ``` bash
 sudo apt-get install john
-sudo apt-get install john screenfetch
+sudo apt-get install screenfetch
+
 ```
 
 

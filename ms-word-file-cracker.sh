@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 
@@ -12,43 +11,48 @@ GREEN="\e[92m"
 STOP="\e[0m"
 
 
+echo "\nchecking requirement"
+REQUIRED_PKG="john"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+echo Checking for $REQUIRED_PKG: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+  sudo apt-get --yes install $REQUIRED_PKG
+fi
+
+REQUIRED_PKG="python3"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+echo Checking for $REQUIRED_PKG: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+  sudo apt-get --yes install $REQUIRED_PKG
+fi
+
+REQUIRED_PKG="screenfetch"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+echo Checking for $REQUIRED_PKG: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+  sudo apt-get --yes install $REQUIRED_PKG
+fi
 
 
 echo '\n'
 echo ""
 echo  "${BOLDGREEN}making tryhackme folder in Desktop${ENDCOLOR}"
-echo '\n'
-mkdir ~/Desktop/tryhackme
-path=~/Desktop/tryhackme
-cd $path
-
-echo '\n'
-echo "${RED}downloading office2john.py${ENDCOLOR}"
 
 echo '\n'
 
-echo  "${BOLDGREEN}removing duplicate office2john files ( it happens to use this script multiple times)                  ${ENDCOLOR}"
-
-rm office2john.py.*
-echo '\n'
-
-sudo wget https://raw.githubusercontent.com/magnumripper/JohnTheRipper/bleeding-jumbo/run/office2john.py
-
-echo '\n'
-echo "__________________________________________________________________________________________"
-echo '\n'
-
-sleep 1
+mkdir ./tryhackme
 
 
+path2= pwd
+echo $path2."asdjfk"
+
+path= pwd
 
 
-sudo python pass_recovery.py
-
-
-sleep 5
-
-echo "__________________________________________________________________________________________"
+echo "______________________________"
 
 
 screenfetch
@@ -62,40 +66,109 @@ printf "${GREEN}"
 printf "=================================\n"
 printf "${STOP}"
 
-echo "__________________________________________________________________________________________"
+echo "______________________________"
 echo '\n'
 
-sleep 2
 
-echo  "${BOLDGREEN}Enter MS WORD file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
-echo "example : /home/kali/Desktop/abcd.docx"
-echo '\n'
+echo "[1] Select 1 to crack MS WORD File password"
+echo "[2] Select 2 to crack PDF File password"
+echo "[3] Select 3 to crack ZIP File password"
+echo "[4] Select 4 to crack RAR File password"
+echo "[5] Select 5 to exit"
 
-read file
+read option
 
 
+if [ $option = 1 ]
+then
+	echo  "${BOLDGREEN}Enter the file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
+	echo "example : /home/kali/Desktop/abcd.docx"
+	echo '\n'
 
-sudo python office2john.py $file  >  $path/hash
+	read file
+	
+	sudo python3 /usr/share/john/office2john.py $file  >  ./tryhackme/hash
+elif [ $option = 2 ]
+then
+	echo  "${BOLDGREEN}Enter the file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
+	echo "example : /home/kali/Desktop/abcd.docx"
+	echo '\n'
+
+
+	read file
+	perl /usr/share/john/pdf2john.pl $file > ./tryhackme/hash
+elif [ $option = 3 ]
+then
+	echo  "${BOLDGREEN}Enter the file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
+	echo "example : /home/kali/Desktop/abcd.docx"
+	echo '\n'
+
+
+	read file
+	/usr/sbin/zip2john $file > ./tryhackme/hash
+elif [ $option = 4 ]
+then
+	echo  "${BOLDGREEN}Enter the file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
+	echo "example : /home/kali/Desktop/abcd.docx"
+	echo '\n'
+
+	read file
+	/usr/sbin/rar2john $file > ./tryhackme/hash
+else 
+	exit
+
+fi
+
 
 
 echo  "${BOLDGREEN}Your Hash file saved sucessfully inside of '$path' folder                  ${ENDCOLOR}"
 echo '\n'
 
-sleep 5
+
+sleep 1
 
 
-echo  "${BOLDGREEN}Attack is going to start. Please wait for some time.                  ${ENDCOLOR}"
 echo '\n'
-sudo john $path/hash --wordlist=$path/second.txt 
+echo "______________________________"
 echo '\n'
 
-echo "__________________________________________________________________________________________"
-echo '\n'
+sleep 1
+
+echo "Select 1 for making our wordlist"
+echo "Select 2 for using wordlist that you have or downloaded"
+
+read p
+
+if [ $p = 1 ]
+then 
+	sudo python3 pass_recovery.py
+	echo "______________________________"
+	echo  "${BOLDGREEN}Attack is going to start. Please wait for some time.                  ${ENDCOLOR}"
+	echo '\n'
+	sudo john ./tryhackme/hash --wordlist=second.txt 
+	echo '\n'
+	echo "______________________________"
+	echo '\n'
+elif [ $p = 2 ]
+then
+	echo "specify the full path to the wordlist"
+	read wordlist1
+	echo "______________________________"
+	echo  "${BOLDGREEN}Attack is going to start. Please wait for some time.                  ${ENDCOLOR}"
+	echo '\n'
+	sudo john ./tryhackme/hash --wordlist=$wordlist1
+	echo '\n'
+	echo "______________________________"
+	echo '\n'
+else 
+	exit
+fi
+
+
+sleep 1
 
 echo  "${BOLDGREEN}Attack is sucessful.                 ${ENDCOLOR}"
 echo '\n'
-
-sleep 2
 
 echo  "${BOLDGREEN}Check password -->                ${ENDCOLOR}"
 echo '\n'
@@ -104,12 +177,6 @@ echo '\n'
 
 echo ""
 echo  "${RED}YOUR PASSWORD IS  :       ${ENDCOLOR}"
-sudo john hash --show  | awk -F: '{print $2}'
+sudo john ./tryhackme/hash --show  | awk -F: '{print $2}'
 echo '\n'
-echo "__________________________________________________________________________________________"
-
-
-
-
-
-
+echo "______________________________"
