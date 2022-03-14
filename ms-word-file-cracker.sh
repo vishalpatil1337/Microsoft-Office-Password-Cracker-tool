@@ -40,9 +40,11 @@ fi
 echo '\n'
 echo ""
 echo  "${BOLDGREEN}making tryhackme folder in Desktop${ENDCOLOR}"
+
 echo '\n'
 
 mkdir ./tryhackme
+
 
 path2= pwd
 echo $path2."asdjfk"
@@ -76,6 +78,7 @@ echo "[5] Select 5 to exit"
 
 read option
 
+
 if [ $option = 1 ]
 then
 	echo  "${BOLDGREEN}Enter the file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
@@ -91,6 +94,7 @@ then
 	echo "example : /home/kali/Desktop/abcd.docx"
 	echo '\n'
 
+
 	read file
 	perl /usr/share/john/pdf2john.pl $file > ./tryhackme/hash
 elif [ $option = 3 ]
@@ -98,6 +102,7 @@ then
 	echo  "${BOLDGREEN}Enter the file name with full path. ( must give file's full path otherwise it will show error )     ${ENDCOLOR}"
 	echo "example : /home/kali/Desktop/abcd.docx"
 	echo '\n'
+
 
 	read file
 	/usr/sbin/zip2john $file > ./tryhackme/hash
@@ -119,7 +124,9 @@ fi
 echo  "${BOLDGREEN}Your Hash file saved sucessfully inside of '$path' folder                  ${ENDCOLOR}"
 echo '\n'
 
+
 sleep 1
+
 
 echo '\n'
 echo "______________________________"
@@ -156,6 +163,7 @@ then
 else 
 	exit
 fi
+
 
 sleep 1
 
