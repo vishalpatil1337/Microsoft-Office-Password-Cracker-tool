@@ -38,7 +38,7 @@ cd Microsoft-Office-Password-Cracker-tool && chmod +x *
       •	AI0 - AI9999  
       •	ai@0 - ai@9999
 
-      in my case the exam password is probably like subject name and 3 to 6 numbers - example ai123  
+   in my case the exam password is probably like subject name and 3 to 6 numbers - example ai123  
                                 
  
    e) after making wordlist it will ask "enter MS WORD file name with full path"
