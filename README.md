@@ -12,8 +12,8 @@ During my exam period i made this tool to crack my password protected question p
 You can install them with the following Command
 
 ``` bash
-sudo apt-get install john
-sudo apt-get install screenfetch
+$ sudo apt-get install john
+$ sudo apt-get install screenfetch
 
 ```
 
@@ -21,9 +21,9 @@ sudo apt-get install screenfetch
 # Installation & Usage
 
 ``` bash
-git clone https://github.com/vishalpatil1337/Microsoft-Office-Password-Cracker-tool.git
-cd Microsoft-Office-Password-Cracker-tool && chmod +x *
-./ms-word-file-cracker.sh       
+$ git clone https://github.com/vishalpatil1337/Microsoft-Office-Password-Cracker-tool.git
+$ cd Microsoft-Office-Password-Cracker-tool && chmod +x *
+$ ./ms-word-file-cracker.sh       
 ```
    a) script will start and will make tryhackme name folder on your desktop. 
    
