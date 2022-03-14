@@ -14,7 +14,10 @@ During my exam period i made this tool to crack my password protected word docum
 
 # Installation & Usage
 
-1) git clone https://github.com/vishalpatil1337/Microsoft-Office-Password-Cracker-tool.git
+``` bash
+git clone https://github.com/vishalpatil1337/Microsoft-Office-Password-Cracker-tool.git
+```
+
 2) cd Microsoft-Office-Password-Cracker-tool && chmod +x *
 3) ./ms-word-file-cracker.sh       
 
