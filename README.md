@@ -7,8 +7,7 @@ During my exam period i made this tool to crack my password protected question p
 
 # Requirements
 
-**John The Ripper
-Screenfetch**
+**John The Ripper & Screenfetch**
 
 You can install them with the following Command
 
@@ -31,7 +30,7 @@ cd Microsoft-Office-Password-Cracker-tool && chmod +x *
    c) if office2john.py alredy exists the second file will be removed using rm command.
 
 
-   d) enter subject name :      here you need to write any subject name for example ai  (artificial intelligence). \n
+   d) enter subject name :      here you need to write any subject name for example ai  (artificial intelligence). /n
                                 it will make Wordlist 0-99999 , ai1-9999, AI0-99999,ai@0-99999 in this format. 
                                 in exam password is probably like subject name then 3 to 6 letters - example ai123  
                                 
