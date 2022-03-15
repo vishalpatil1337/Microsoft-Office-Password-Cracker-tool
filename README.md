@@ -38,7 +38,7 @@ $ ./ms-word-file-cracker.sh
    
    4) After Selecting the option you will be prompted to type the full path of the file. if you have followed step 1, then you will only need to enter the name of the file (eg. Protected.pdf ), otherwise please enter the full path.
    
-   5) Now, the tool will prompt you with 2 options, 1 to build a wordlist with subject details (ie. if the password format is your subject and any number like. **ai2234**).
+   5) Now, the tool will prompt you with 2 options, 1 to build a wordlist with subject details (ie. if the password format is your subject artificial intelligence and any number like. **ai2234**).
    
     
      enter subject name : ai  
