@@ -1,5 +1,5 @@
 # Password-Cracker-Tool - Finds Password of Protected Files
-Supports Cracking Passwords of All MS-Office-File Formats Including but not limited to :
+Supports Cracking Passwords of All MS-Office-File Formats and other formats, Including but not limited to :
 Excel, Word, PDF, Rar, Zip Files
 
 ## Previous Version - Microsoft-Office-Password-Cracker-tool
