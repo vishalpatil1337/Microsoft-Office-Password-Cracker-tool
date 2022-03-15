@@ -51,7 +51,7 @@ $ ./ms-word-file-cracker.sh
    
    6) And the 2nd option is to use a wordlist of your choice. Like i said you can copy the wordlist to working directory and enter it's name when prompted or enter the full path.
 
-   7) Now, the tool will start to try every password on the wordlist upon the protected file and if successful we will get the password printed in the screen
+   7) Now, the tool will start to try every password on the wordlist upon the protected file and if successful we will get the password printed on the screen
 
    8) Copy that password and use it to open the files as usual.
    
