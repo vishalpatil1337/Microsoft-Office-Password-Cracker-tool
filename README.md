@@ -40,7 +40,7 @@ $ ./ms-word-file-cracker.sh
    
    5) Now, the tool will prompt you with 2 options, 1 to build a wordlist with subject details (ie. if the password format is your subject and any number like. **ai2234**).
    
-    ```
+    
      enter subject name : ai  
      Now, our custom wordlist builder will make a Wordlist containing   
       
@@ -50,7 +50,7 @@ $ ./ms-word-file-cracker.sh
    •	ai@0 - ai@9999
 
    in my case the exam password is probably like subject name and 3 to 6 numbers - example ai123  
-   ```
+   
    
    6) And the 2nd option is to use a wordlist of your choice. Like i said you can copy the wordlist to working directory and enter it's name when prompted or enter the full path.
 
