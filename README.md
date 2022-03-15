@@ -2,7 +2,7 @@
 Supports Cracking Passwords of All MS-Office-File Formats Including but not limited to :
 Excel, Word, PDF, Rar, Zip Files
 
-# Old Version - Microsoft-Office-Password-Cracker-tool
+## Previous Version - Microsoft-Office-Password-Cracker-tool
 Using Microsoft Office Password Cracker tool we can crack any Microsoft Office file's password.This tool uses john the ripper and office2john.py script to crak the password. wordlist generator is also included in python script.
 
 During my exam period i made this tool to crack my password protected question paper.
