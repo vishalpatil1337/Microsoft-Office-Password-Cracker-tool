@@ -47,10 +47,7 @@ $ ./ms-word-file-cracker.sh
      • 0 - 9999  
      • ai0 - ai9999  
      • AI0 - AI9999  
-     • ai@0 - ai@9999
-
-   in my case the exam password is probably like subject name and 3 to 6 numbers - example ai123  
-   
+     • ai@0 - ai@9999   
    
    6) And the 2nd option is to use a wordlist of your choice. Like i said you can copy the wordlist to working directory and enter it's name when prompted or enter the full path.
 
