@@ -71,5 +71,5 @@ Special Thanks to -:
 
    •	Omkar Kalantre  :   https://github.com/omkar-ok :  www.linkedin.com/in/omkar-kalantre
    
-   •	Satyam Ray      :   https://github.com/batmans0123456 : https://www.linkedin.com/in/samyam-ray-3b3815234/
+   •	Samyam Ray      :   https://www.linkedin.com/in/samyam-ray-3b3815234/
 
